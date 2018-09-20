@@ -1,0 +1,61 @@
+Customers with orders:
+
++-----------------+                            +--------------+
+| Customer        |                            | Order        |
+| email           | 1                     many | order number |
+| mailing address +----------------------------+ date         |
+| name            |                            +--------------+
+|                 |
++-----------------+
+
+
+People with addresses
+
++--------+                +------------+               +--------------+
+| Person |                | Residence  |               | City         |
+| name   |many           1| address    |many          1| name         |
+| age    +----------------+ year built +---------------+ year founded |
+|        |                |            |               |              |
++--------+                +------------+               +--------------+
+                                                              |many
+                                                              |
+                                                              |
+                                                              |
+                                                              |1
+                          +-----------------+          +--------------+
+                          | Country         |1     many| Province     |
+                          | name            +----------+ name         |
+                          | year founded    |          | year founded |
+                          | national animal |          |              |
+                          |                 |          +--------------+
+                          +-----------------+
+
+
+A library system
+
++---------+
+| Author  |
+| name    |
+|         |
++---------+
+   1|
+    |
+    |
+many|
++-------+               +-------------+               +-------------+
+| Book  |1          many| Hold        |many          1| Patron      |
+| title +---------------+ date placed +---------------+ name        |
+| isbn  |               |             |               | card number |
+|       |               +-------------+               | email       |
++-------+                                             |             |
+  1|                                                  +-------------+
+   |                                                         |1
+   |                                                         |
+   |                                                         |
+   |                                                         |
+   |                    +----------+                         |
+   |                    | Loan     |                         |
+   |                many| due date |many                     |
+   +--------------------+ renewed? +-------------------------+
+                        |          |
+                        +----------+
