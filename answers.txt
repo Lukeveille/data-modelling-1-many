@@ -7,4 +7,4 @@
 7. SELECT name FROM provinces WHERE id=(SELECT province_id FROM cities WHERE id=(SELECT city_id FROM residences WHERE address='4740 McDermott Street'));
 8. SELECT name FROM countries WHERE id=(SELECT country_id FROM provinces WHERE id=(SELECT province_id FROM cities WHERE id=(SELECT city_id FROM residences WHERE address='4740 McDermott Street')));
 9. SELECT name FROM countries WHERE id=(SELECT country_id FROM provinces WHERE id=(SELECT province_id FROM cities WHERE id=(SELECT city_id FROM residences WHERE id=(SELECT residence_id FROM persons WHERE name='Destini Davis'))));
-10. SELECT COUNT(*) FROM authors WHERE name='Aditya Mukerjee';
+10. SELECT COUNT(*) FROM authors WHERE name='Aditya Mukerjee';`
